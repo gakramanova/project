@@ -1,0 +1,56 @@
+/* ------- PRELOADER ------- */
+.preloader {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: var(--bg-light);
+    z-index: var(--z-preloader);
+    display: grid;
+    place-items: center;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+.preloader--hidden { opacity: 0; visibility: hidden; }
+.preloader__logo {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* ------- CUSTOM CURSOR (PREMIUM VERSION) ------- */
+.cursor, .cursor-follower {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: var(--z-cursor);
+    transform: translate(-50%, -50%);
+    transition: transform 0.2s ease-out, opacity 0.3s ease-out;
+}
+.cursor {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    transition-property: transform, opacity, background-color;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-out;
+}
+.cursor-follower {
+    width: 45px;
+    height: 45px;
+    background-color: white; /* Цвет, который будет инвертироваться */
+    mix-blend-mode: difference; /* Ключевой эффект инверсии */
+    transition-property: transform, background-color;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+/* -- Состояния курсора -- */
+.cursor-follower.is-active ~ .cursor { /* Прячем центральную точку */
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+}
+.cursor-follower.is-active { /* Преобразуем кольцо */
+    transform: translate(-50%, -50%) scale(1.8);
+    background-color: var(--primary-color);
+    mix-blend-mode: normal; /* Отключаем инверсию, чтобы показать чистый цвет */
+}

@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura — Салон Красоты | Премиум-студия</title>
+    
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- 1. ПОДКЛЮЧЕНИЕ SWIPER.JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Ваши файлы -->
+    <link rel="stylesheet" href="styles/style.css">
+    <script defer src="scripts/script.js"></script>
+</head>
+<body>
+
+    <!-- PRELOADER -->
+    <div class="preloader" id="preloader">
+        <div class="preloader__logo">Aura</div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="#" class="logo">Aura</a>
+                <nav class="nav" id="nav">
+                    <a href="#about" class="nav__link">О нас</a>
+                    <a href="#services" class="nav__link">Услуги</a>
+                    <a href="#masters" class="nav__link">Мастера</a>
+                    <a href="#gallery" class="nav__link">Галерея</a>
+                    <a href="#reviews" class="nav__link">Отзывы</a>
+                    <a href="#contacts" class="nav__link">Контакты</a>
+                </nav>
+                <button class="button" id="open-modal-btn">Записаться онлайн</button>
+                <button class="burger" id="burger">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero__content">
+                    <h1 class="hero__title" data-animate-text>Искусство красоты в каждом прикосновении</h1>
+                    <p class="hero__subtitle">Откройте для себя мир безупречного стиля и гармонии в нашем салоне.</p>
+                    <button class="button button--large" id="open-modal-btn-hero">Найти своего мастера</button>
+                </div>
+            </div>
+            <div class="hero__background"></div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section" id="about">
+             <div class="container">
+                <div class="about__grid">
+                    <div class="about__content">
+                        <h2 class="section__title" data-animate>О нашей студии</h2>
+                        <h3 class="about__heading" data-animate>Место, где рождается ваша уверенность</h3>
+                        <p data-animate>«Aura» — это не просто салон красоты. Это пространство, где профессионализм встречается с искусством, а каждая процедура превращается в ритуал заботы о себе. Наша миссия — помочь вам раскрыть свою уникальную красоту и подарить моменты истинного расслабления и удовольствия.</p>
+                        <p data-animate>Мы используем только премиальные материалы и следим за последними тенденциями в мире бьюти-индустрии, чтобы предложить вам лучшее.</p>
+                    </div>
+                    <div class="about__image-container" data-animate>
+                        <img src="images/about.avif" alt="Интерьер салона красоты Aura">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+                <!-- PRINCIPLES SECTION (Сформировано через JS) -->
+        <section class="section" id="principles">
+            <div class="container">
+                <h2 class="section__title" data-animate>Наши принципы</h2>
+                <div class="principles__grid" id="principles-container">
+                    <!-- Этот блок будет заполнен с помощью цикла for...in в JavaScript -->
+                </div>
+            </div>
+        </section>
+
+
+          <!-- SERVICES SECTION (Сформировано через JSON) -->
+        <section class="section section--gray" id="services">
+            <div class="container">
+                <h2 class="section__title" data-animate>Наши Услуги</h2>
+                <div class="services__grid" id="services-container">
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MASTERS SECTION -->
+        <section class="section" id="masters">
+            <div class="container">
+                <h2 class="section__title" data-animate>Наши Мастера</h2>
+                <div class="masters__grid">
+                    <!-- Карточки мастеров остаются без изменений -->
+                    <div class="master-card" data-animate>
+                        <div class="master-card__photo">
+                            <img src="images/kolor.jpg" alt="Фото мастера Анна">
+                        </div>
+                        <h3 class="master-card__name">Анна Смирнова</h3>
+                        <p class="master-card__role">Стилист-колорист</p>
+                    </div>
+                    <div class="master-card" data-animate>
+                        <div class="master-card__photo">
+                            <img src="images/nogti.jpg" alt="Фото мастера Елена">
+                        </div>
+                        <h3 class="master-card__name">Елена Вольская</h3>
+                        <p class="master-card__role">Мастер ногтевого сервиса</p>
+                    </div>
+                    <div class="master-card" data-animate>
+                        <div class="master-card__photo">
+                           <img src="images/vizajist.jpeg" alt="Фото мастера Ирина">
+                        </div>
+                        <h3 class="master-card__name">Ирина Новикова</h3>
+                        <p class="master-card__role">Визажист-бровист</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="section section--gray" id="gallery">
+            <div class="container">
+                <h2 class="section__title" data-animate>Галерея Работ</h2>
+                <div class="gallery__grid">
+                    <!-- Изображения теперь имеют data-src для лайтбокса -->
+                    <div class="gallery__item" data-animate><img src="images/primer1.jpg" alt="Пример работы 1"></div>
+                    <div class="gallery__item" data-animate><img src="images/primer2.webp" alt="Пример работы 2"></div>
+                    <div class="gallery__item" data-animate><img src="images/brovi.jpg" alt="Пример работы 3"></div>
+                    
+                </div>
+            </div>
+        </section>
+
+
+        
+   <!-- REVIEWS SECTION (Swiper.js Carousel) -->
+<section class="section" id="reviews">
+    <div class="container">
+        <h2 class="section__title" data-animate>Что говорят наши клиенты</h2>
+        
+        <div class="swiper-container-wrapper">
+            <!-- Swiper -->
+            <div class="swiper reviews-slider">
+                <div class="swiper-wrapper">
+                    <!-- Слайд 1 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-card__rating">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <blockquote class="review-card__text">“Лучший салон, в котором я когда-либо была! Мастер Анна — настоящий волшебник. Волосы выглядят потрясающе, а атмосфера в салоне просто невероятная. Спасибо!”</blockquote>
+                            <p class="review-card__name">Мария Ковалёва</p>
+                        </div>
+                    </div>
+                    <!-- Слайд 2 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-card__rating">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <blockquote class="review-card__text">“Делала маникюр у Елены. Очень аккуратная работа, огромная палитра цветов и идеальное покрытие. Наконец-то я нашла своего мастера. Обязательно вернусь снова.”</blockquote>
+                            <p class="review-card__name">Светлана Антонова</p>
+                        </div>
+                    </div>
+                    <!-- Слайд 3 -->
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="review-card__rating">
+                                <i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i><i class='bx bxs-star'></i>
+                            </div>
+                            <blockquote class="review-card__text">“Приходила на коррекцию и окрашивание бровей. Результат превзошел все ожидания! Ирина подобрала идеальную форму и цвет. Очень довольна, всем рекомендую!”</blockquote>
+                            <p class="review-card__name">Екатерина Лебедева</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Кнопки навигации -->
+            <div class="swiper-button-prev reviews-arrow"></div>
+            <div class="swiper-button-next reviews-arrow"></div>
+        </div>
+
+        <!-- Пагинация (точки) -->
+        <div class="swiper-pagination reviews-pagination"></div>
+    </div>
+</section>
+        
+       <!-- CONTACTS SECTION -->
+        <section class="section section--gray" id="contacts">
+            <div class="container">
+                <h2 class="section__title">Контакты и Запись</h2>
+                <div class="contacts__wrapper">
+                    <div class="contacts__info">
+                        <h3>Наш адрес и телефон</h3>
+                        <p>Мы всегда рады видеть вас в нашем салоне. Свяжитесь с нами, чтобы задать вопросы или записаться.</p>
+                        <ul class="contacts__list">
+                            <li>
+                                <i class='bx bx-map'></i>
+                                <span>г. Москва, ул. Прекрасная, д. 15</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-phone'></i>
+                                <span>+7 (999) 123-45-67</span>
+                            </li>
+                            <li>
+                                <i class='bx bx-time-five'></i>
+                                <span>Пн - Вс: 10:00 - 21:00</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.394142145823!2d37.61502127734492!3d55.75201687308119!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a5c2f9d3d%3A0x633215c3d55b0a68!2z0JrRgNC10LzQu9GM!5e0!3m2!1sru!2sru!4v1698670119154!5m2!1sru!2sru" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <a href="#" class="logo">Aura</a>
+                <div class="social">
+                    <a href="#" class="social__link" aria-label="VK"><i class='bx bxl-vk'></i></a>
+                    <a href="#" class="social__link" aria-label="Telegram"><i class='bx bxl-telegram'></i></a>
+                </div>
+                <p class="footer__copy">&copy; 2025 Aura. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL WINDOW -->
+    <div class="modal" id="modal">
+        <div class="modal__content">
+            <button class="modal__close-btn" id="close-modal-btn">&times;</button>
+            <h2 class="section__title">Онлайн-запись</h2>
+            <form class="form" id="booking-form" novalidate>
+                <div class="form__group">
+                    <label for="name" class="form__label">Ваше имя</label>
+                    <input type="text" id="name" name="name" class="form__input" placeholder="Мария" required>
+                    <small class="form__error-message"></small>
+                </div>
+                <div class="form__group">
+                    <label for="phone" class="form__label">Номер телефона</label>
+                    <input type="tel" id="phone" name="phone" class="form__input" placeholder="+7 (___) ___-__-__" required>
+                    <small class="form__error-message"></small>
+                </div>
+                <!-- Остальные поля формы без изменений -->
+                <div class="form__group">
+                    <label for="service" class="form__label">Выберите услугу</label>
+                    <select id="service" name="service" class="form__input">
+                        <option value="haircut">Парикмахерские услуги</option>
+                        <option value="nails">Ногтевой сервис</option>
+                        <option value="makeup">Визаж и брови</option>
+                        <option value="other">Другое</option>
+                    </select>
+                </div>
+                 <div class="form__group">
+                    <label for="master" class="form__label">Выберите мастера</label>
+                    <select id="master" name="master" class="form__input">
+                        <option value="any">Любой мастер</option>
+                        <option value="anna">Анна Смирнова (Стилист)</option>
+                        <option value="elena">Елена Вольская (Ногти)</option>
+                        <option value="irina">Ирина Новикова (Визаж)</option>
+                    </select>
+                </div>
+                <div class="form__group">
+                    <label for="date" class="form__label">Желаемая дата и время</label>
+                    <input type="datetime-local" id="date" name="date" class="form__input" required>
+                    <small class="form__error-message"></small>
+                </div>
+                <button type="submit" class="button form__button">Отправить заявку</button>
+            </form>
+            <div id="form-message" class="form__message"></div>
+        </div>
+    </div>
+    
+    <!-- LIGHTBOX FOR GALLERY -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox__close">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev"><i class='bx bx-chevron-left'></i></button>
+        <img src="" alt="Просмотр изображения" class="lightbox__image">
+        <button class="lightbox__nav lightbox__nav--next"><i class='bx bx-chevron-right'></i></button>
+    </div>
+
+    <!-- BACK TO TOP BUTTON -->
+    <a href="#" class="back-to-top" id="back-to-top" aria-label="Вернуться наверх"><i class='bx bx-up-arrow-alt'></i></a>
+
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* ------- STYLISH SWIPER.JS STYLES FOR REVIEWS ------- */
+.swiper-container-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.reviews-slider {
+    padding: 2rem 0; /* Увеличили отступы для "воздуха" */
+}
+
+.reviews-slider .swiper-slide {
+    height: auto;
+    opacity: 0; /* Начальная прозрачность для fade-эффекта */
+    transition: opacity 0.5s ease;
+}
+
+.reviews-slider .swiper-slide-active {
+    opacity: 1; /* Активный слайд делаем видимым */
+}
+
+/* Новые стили для карточки отзыва */
+.review-card {
+    position: relative;
+    background-color: var(--white-color); /* Сделаем фон белым для контраста */
+    border: none;
+    box-shadow: var(--shadow);
+    padding: 3rem;
+    height: 100%;
+}
+
+/* Декоративные кавычки */
+.review-card::before {
+    content: '\201C'; /* Символ открывающей кавычки “ */
+    font-family: var(--font-heading);
+    font-size: 6rem;
+    line-height: 1;
+    color: var(--primary-color);
+    opacity: 0.15;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    z-index: 1;
+}
+
+.review-card__text {
+    font-size: 1.1rem; /* Сделаем текст отзыва крупнее */
+    line-height: 1.8;
+    position: relative;
+    z-index: 2;
+}
+
+.review-card__name {
+    margin-top: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.review-card__rating {
+    margin-bottom: 1.5rem;
+}
+
+/* Стили для стрелок навигации */
+.reviews-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: var(--white-color);
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    color: var(--primary-color);
+    transition: var(--transition-fast);
+    z-index: 10;
+}
+
+.reviews-arrow:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.reviews-arrow::after {
+    font-size: 1.5rem; /* Размер иконки-стрелки */
+}
+
+.swiper-button-prev.reviews-arrow {
+    left: -25px; /* Выносим стрелки за пределы контейнера */
+}
+
+.swiper-button-next.reviews-arrow {
+    right: -25px;
+}
+
+/* Стили для пагинации (точки) */
+.reviews-pagination {
+    position: static; /* Убираем абсолютное позиционирование */
+    margin-top: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background-color: #d1c8c5;
+    width: 10px;
+    height: 10px;
+    transition: var(--transition-fast);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    transform: scale(1.2);
+}
+
+/* Адаптивность для стрелок на мобильных */
+@media (max-width: 992px) {
+    .swiper-button-prev.reviews-arrow {
+        left: -10px;
+    }
+    .swiper-button-next.reviews-arrow {
+        right: -10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .reviews-arrow {
+        display: none; /* Скрываем стрелки на мобильных, оставляем только свайп и точки */
+    }
+}

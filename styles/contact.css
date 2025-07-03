@@ -1,0 +1,12 @@
+/* ------- CONTACTS & FOOTER (остаются без изменений) ------- */
+.contacts__wrapper { display: grid; grid-template-columns: 1fr 1.2fr; gap: 3rem; align-items: center; }
+.contacts__list li { display: flex; align-items: center; margin-bottom: 1.5rem; }
+.contacts__list i { font-size: 1.5rem; color: var(--primary-color); margin-right: 1rem; }
+.contacts__map { height: 400px; border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow); }
+.contacts__map iframe { filter: grayscale(1) invert(0.9); }
+.footer { background-color: var(--heading-color); color: #a7a7a7; padding: 4rem 0 2rem; text-align: center; }
+.footer .logo { color: var(--white-color); margin-bottom: 1.5rem; display: inline-block; }
+.social { margin-bottom: 1.5rem; }
+.social__link { font-size: 1.5rem; color: var(--white-color); margin: 0 0.75rem; transition: color 0.3s; }
+.social__link:hover { color: var(--primary-color); }
+.footer__copy { font-size: var(--small-font-size); }

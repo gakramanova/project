@@ -1,0 +1,24 @@
+/* ------- PRINCIPLES SECTION ------- */
+.principles__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+.principle-card {
+    padding: 2rem;
+}
+.principle-card__icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+.principle-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+.principle-card__text {
+    font-size: var(--normal-font-size);
+}

@@ -1,0 +1,7 @@
+/* ------- SERVICES SECTION ------- */
+.services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.service-card { background-color: var(--white-color); padding: 2.5rem 2rem; text-align: center; border-radius: var(--border-radius); box-shadow: var(--shadow); transition: var(--transition-smooth); }
+.service-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+.service-card__icon { margin: 0 auto 1.5rem; background-image: var(--primary-gradient); width: 80px; height: 80px; border-radius: 50%; display: grid; place-items: center; }
+.service-card__icon i { font-size: 2.5rem; color: var(--white-color); }
+.service-card__title { font-size: var(--h3-font-size); margin-bottom: 0.5rem; }

@@ -1,0 +1,5 @@
+/* ------- ABOUT SECTION ------- */
+.about__grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 4rem; }
+.about__image-container { border-radius: var(--border-radius); overflow: hidden; box-shadow: var(--shadow); }
+.about__image-container img { transition: transform 0.5s ease; }
+.about__image-container:hover img { transform: scale(1.05); }

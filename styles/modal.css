@@ -1,0 +1,64 @@
+/* ------- MODAL WINDOW & FORM ------- */
+.modal { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: grid; place-items: center; z-index: var(--z-modal); visibility: hidden; opacity: 0; transition: visibility 0.3s, opacity 0.3s; backdrop-filter: blur(3px); }
+.modal--open { visibility: visible; opacity: 1; }
+.modal__content { position: relative; background-color: var(--white-color); padding: 3rem; border-radius: var(--border-radius); max-width: 500px; width: 90%; box-shadow: var(--shadow-hover); transform: scale(0.95); transition: transform 0.3s; }
+.modal--open .modal__content { transform: scale(1); }
+.modal__close-btn { position: absolute; top: 1rem; right: 1.5rem; font-size: 2.5rem; color: #aaa; transition: color 0.3s; }
+.modal__close-btn:hover { color: var(--heading-color); }
+/* Form validation styles */
+.form__group { margin-bottom: 1rem; position: relative; }
+.form__input { width: 100%; padding: 0.8rem 1rem; border: 1px solid #ddd; border-radius: 8px; font-family: var(--font-body); font-size: var(--normal-font-size); transition: border-color 0.3s, box-shadow 0.3s; }
+.form__input:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 0 3px rgba(197, 168, 160, 0.3); }
+.form__input.is-invalid { border-color: var(--error-color); }
+.form__error-message { color: var(--error-color); font-size: var(--small-font-size); display: block; margin-top: 0.25rem; height: 1em; }
+.form__message { margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center; display: none; }
+.form__message--success { background-color: #d1e7dd; color: #0f5132; }
+.form__message--error { background-color: #f8d7da; color: #842029; }
+
+/* ------- LIGHTBOX ------- */
+.lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); z-index: var(--z-lightbox); display: flex; align-items: center; justify-content: center; visibility: hidden; opacity: 0; transition: var(--transition-fast); backdrop-filter: blur(5px); }
+.lightbox.is-open { visibility: visible; opacity: 1; }
+.lightbox__image { max-width: 90vw; max-height: 80vh; transform: scale(0.9); transition: transform 0.4s ease; }
+.lightbox.is-open .lightbox__image { transform: scale(1); }
+.lightbox__close, .lightbox__nav { position: absolute; color: white; font-size: 2.5rem; transition: var(--transition-fast); }
+.lightbox__close:hover, .lightbox__nav:hover { color: var(--primary-color); transform: scale(1.1); }
+.lightbox__close { top: 2rem; right: 2rem; }
+.lightbox__nav { top: 50%; transform: translateY(-50%); }
+.lightbox__nav--prev { left: 2rem; }
+.lightbox__nav--next { right: 2rem; }
+
+/* ------- BACK TO TOP BUTTON ------- */
+.back-to-top { position: fixed; bottom: 2rem; right: 2rem; width: 50px; height: 50px; background-image: var(--primary-gradient); color: var(--white-color); border-radius: 50%; display: grid; place-items: center; z-index: var(--z-back-to-top); font-size: 1.5rem; box-shadow: var(--shadow); visibility: hidden; opacity: 0; transform: translateY(20px); transition: var(--transition-fast); }
+.back-to-top.is-visible { visibility: visible; opacity: 1; transform: translateY(0); }
+.back-to-top:hover { box-shadow: var(--shadow-hover); transform: translateY(-5px) scale(1.05); }
+
+
+/* ==========================================================================
+   7. АДАПТИВНОСТЬ (MEDIA QUERIES)
+   ========================================================================== */
+
+/* ------- Планшеты (до 992px) ------- */
+@media (max-width: 992px) {
+    .about__grid { grid-template-columns: 1fr; }
+    .about__image-container { order: -1; }
+    .slider-btn { display: none; } /* Скрываем кнопки слайдера на планшетах */
+}
+
+/* ------- Мобильные устройства (до 768px) ------- */
+@media (max-width: 768px) {
+    /* Отключаем кастомный курсор на мобильных */
+    .cursor, .cursor-follower { display: none; }
+    body, a, button { cursor: default; }
+
+    .section { padding: 4rem 0; }
+    .header .button { display: none; }
+    .burger { display: block; }
+    .nav { position: fixed; top: 0; right: -100%; width: 70%; height: 100vh; background-color: var(--bg-light); flex-direction: column; justify-content: center; align-items: center; padding: 2rem; box-shadow: -5px 0 15px rgba(0,0,0,0.1); transition: right 0.4s ease-in-out; }
+    .nav--open { right: 0; }
+    .nav__link { margin: 1.5rem 0; font-size: 1.2rem; }
+    .burger.is-active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .burger.is-active span:nth-child(2) { opacity: 0; }
+    .burger.is-active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .hero { height: 90vh; min-height: 600px; }
+    .contacts__wrapper { grid-template-columns: 1fr; gap: 2rem; }
+}

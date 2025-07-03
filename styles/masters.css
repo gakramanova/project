@@ -1,0 +1,7 @@
+/* ------- MASTERS SECTION ------- */
+.masters__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+.master-card__photo { border-radius: var(--border-radius); overflow: hidden; margin-bottom: 1.5rem; box-shadow: var(--shadow); }
+.master-card__photo img { transition: transform 0.4s ease; }
+.master-card:hover .master-card__photo img { transform: scale(1.05); }
+.master-card__name { font-size: 1.3rem; margin-bottom: 0.25rem; }
+.master-card__role { color: var(--primary-color); font-weight: 500; }
